@@ -12,5 +12,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Run CI confirmation message
-        run: echo "✅ CI Workflow is working from GitHub Actions!"
+
+      - name: Say Hello (Bash)
+        run: echo "✅ GitHub Actions workflow triggered!"
+
+      - name: Run a Python script
+        run: |
+          echo " Running Python..."
+          python3 -c "print(' Hello from Python inside GitHub Actions!')"
+
+      - name: Run a Bash script
+        run: |
+          echo " Bash script is running!"
+          echo " Everything looks good!"
