@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Say Hello (Bash)
+        run: echo "✅ GitHub Actions workflow triggered!"
+
+      - name: Run a Python script
+        run: |
+          echo " Running Python..."
+          python3 -c "print(' Hello from Python inside GitHub Actions!')"
+
+      - name: Run a Bash script
+        run: |
+          echo " Bash script is running!"
+          echo " Everything looks good!"
