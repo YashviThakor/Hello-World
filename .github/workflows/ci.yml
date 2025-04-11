@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: echo "✅ CI Workflow is working!"
+      - uses: actions/checkout@v3
+      - name: Run CI confirmation message
+        run: echo "✅ CI Workflow is working from GitHub Actions!"
