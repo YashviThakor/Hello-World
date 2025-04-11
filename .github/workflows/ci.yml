@@ -1,14 +1,16 @@
-name: Basic CI
+name: CI
 
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
   pull_request:
+    branches: [ master ]
 
 jobs:
-  hello:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Say Hello
-        run: echo "✅ GitHub Actions workflow triggered!"
+    - uses: actions/checkout@v2
+    - name: Run a one-line script
+      run: echo "✅ CI Workflow is working!"
